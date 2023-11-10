@@ -15,13 +15,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoApplication extends SpringBootServletInitializer {
 
 	@Autowired
+	UserRepository userRepository;
 
+	
 	@Override
     protected SpringApplicationBuilder configure(
       SpringApplicationBuilder builder) {
         return builder.sources(DemoApplication.class);
     }
-	UserRepository userRepository;
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
